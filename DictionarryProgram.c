@@ -46,9 +46,9 @@ int main (int argc, char *argv[])
                                     {"ajar",     "partially opened"                },
                                     {"introvert", "someone independent who does his/her work alone"}
                                     };
-    if (argc != 2){
+    if (argc < 2){
        fprintf(stderr, "You have not suplied the word\n");
-       exit (EXIT_FAILURE); 
+       exit (1); 
     }
     int lookup (struct Entry Dict[], char Word[], int);                    
     int entry = lookup (Dictionary, argv[1], entries);
